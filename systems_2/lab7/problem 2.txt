@@ -1,0 +1,15 @@
+1. FCFS 
+    a runs first, uses 1000 ms, then finishes at 1000, so the turnaround time for a = 1000. 
+    Then, b runs for the first 10 ms, then blocks for 20. While b is in i/o, c runs for the first 20 ms, then blocks for 10. 
+    b and c alternate until they are finished. C finishes first with a turnaround time of 1150, and then b finsihes with a turnaround time of 1240.
+    The average turnaround time for all 3 is 1130 ms
+
+2. RR   
+    B will finish first with a time of 290, then c will finish right after that with a time of 300. A will take a lot longer, finishing at 1200. 
+    the average turnaround = 596.67
+
+3. Shortest Proccess Next
+    B runs first and finsihes at 100
+    Then c runs next and finishes at 200
+    Finally a runs and finishes at 1200
+    the average turnaround time is 500

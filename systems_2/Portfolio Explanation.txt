@@ -1,0 +1,13 @@
+﻿Lab 1 - Pointers
+Lab 2 - Prime finding using parallel partitioning
+Lab 3 - Sockets
+Lab 4 - Semaphores
+Lab 5 - Deadlocks
+Lab 6 - GPU programming
+Lab 7 - Scheduling
+Lab 8 - Virtual Memory
+
+
+Project 1 - Mini Shell
+Project 2 - Block Chain
+Project 3 - Scheduling Simulator

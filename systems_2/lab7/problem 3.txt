@@ -1,0 +1,3 @@
+RR
+
+R finshes first at 880, then s finsihes at 900, then q finshes at 1110 and the average turnaround time is 960

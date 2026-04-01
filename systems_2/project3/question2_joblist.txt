@@ -1,0 +1,5 @@
+# Question 2 job list (Arrive at 0, I/O block duration should be 10 ms)
+# Format: name priority arrival_time total_time block_interval
+A 1 0 1000 1001
+B 1 0 100 10
+C 1 0 100 20

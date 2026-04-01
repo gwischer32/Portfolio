@@ -1,0 +1,25 @@
+1. order by priority (nonpreemptive, highest priority first) (highest number first)
+    b(6), e(8), A(10), c(2), d(4)
+    Completion times (cumulative): 6, 14, 24, 26, 30
+    Turnarounds = same → sum = 100 → mean = 100 / 5 = 20
+
+2. FCFS (a, b, c, d, e)
+    Order A(10), B(6), C(2), D(4), E(8)
+
+    Completion times: 10, 16, 18, 22, 30
+    Sum = 96, mean = 96 / 5 = 19.2
+
+3. SJF 
+    Order by runtime: C(2), D(4), B(6), E(8), A(10)
+
+    Completion times: 2, 6, 12, 20, 30
+    Sum = 70, mean = 70 / 5 = 14.0
+
+4. RR 
+    c finishes at 8
+    d finishes at 17
+    b finsihes at 23
+    e finishes at 28
+    a finishes at 30
+
+    Sum = 106, mean = 106 / 5 = 21.2

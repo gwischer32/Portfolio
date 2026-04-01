@@ -1,0 +1,7 @@
+total 52
+-rw-r--r-- 1 grawisch student  3535 Sep 26 23:18 Shell.c
+-rwxr-xr-x 1 grawisch student 16064 Sep 26 23:20 echo_input
+-rw-r--r-- 1 grawisch student   128 Sep 26 23:20 echo_input.c
+-rw-r--r-- 1 grawisch student     0 Sep 26 23:23 files.txt
+-rwxr-xr-x 1 grawisch student 16784 Sep 26 23:18 foo
+-rw-r--r-- 1 grawisch student    11 Sep 26 23:20 input.txt
