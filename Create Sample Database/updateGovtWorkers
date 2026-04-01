@@ -1,0 +1,50 @@
+# updateDeleteGovtWorkers.py
+import pymongo
+from pymongo import MongoClient
+import pprint
+
+client = MongoClient()
+db = client.db_people
+peeps = db.thePeople
+
+# --------------------------
+# 1️⃣ Update ONE document
+# --------------------------
+print("\n--- Update ONE document ---")
+one_person = peeps.find_one()   # just grab first person
+print("Before update:")
+pprint.pprint(one_person)
+
+peeps.update_one({"pid": one_person["pid"]}, {"$inc": {"salary": 5000}})
+
+print("\nAfter update:")
+pprint.pprint(peeps.find_one({"pid": one_person["pid"]}))
+
+# --------------------------
+# 2️⃣ Update MANY documents
+# --------------------------
+print("\n--- Update MANY documents (everyone in CA gets a 2% raise) ---")
+print("Before:")
+for p in peeps.find({"state": "CA"}, {"_id": 0, "pid": 1, "salary": 1}).limit(3):
+    pprint.pprint(p)
+
+peeps.update_many({"state": "CA"}, {"$mul": {"salary": 1.02}})
+
+print("\nAfter:")
+for p in peeps.find({"state": "CA"}, {"_id": 0, "pid": 1, "salary": 1}).limit(3):
+    pprint.pprint(p)
+
+# --------------------------
+# 3️⃣ Delete MANY documents
+# --------------------------
+print("\n--- Delete MANY documents (people age > 95) ---")
+print("Before:")
+for p in peeps.find({"age": {"$gt": 95}}, {"_id": 0, "pid": 1, "age": 1}).limit(5):
+    pprint.pprint(p)
+
+delete_result = peeps.delete_many({"age": {"$gt": 95}})
+print(f"\nDeleted {delete_result.deleted_count} documents.")
+
+print("\nAfter:")
+for p in peeps.find({"age": {"$gt": 95}}, {"_id": 0, "pid": 1, "age": 1}).limit(5):
+    pprint.pprint(p)
